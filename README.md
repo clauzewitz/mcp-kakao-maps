@@ -8,8 +8,38 @@
 
 ## 사용 방법
 
+python 직접 실행
+```
+{
+    "servers": {
+        "kakao-maps": {
+            "command": "python",
+            "args": ["-m", " src.kakao_maps.server.py"],
+            "env": {
+                "KAKAO_API_KEY": "Enter your KAKAO API Key here.",
+            }
+        }
+    }
+}
 ```
 
+Docker를 이용한 실행
+```
+{
+    "servers": {
+        "kakao-maps": {
+            "command": "docker",
+            "args": [
+                "run",
+                "-i",
+                "--rm",
+                "-e",
+                "KAKAO_API_KEY",
+                "kakao-maps:latest"
+            ],
+            "env": {
+                "KAKAO_API_KEY": "Enter your KAKAO API Key here.",
+}
 ```
 
 ## 라이선스
