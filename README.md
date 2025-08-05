@@ -39,6 +39,9 @@ Docker를 이용한 실행
             ],
             "env": {
                 "KAKAO_API_KEY": "Enter your KAKAO API Key here.",
+            }
+        }
+    }
 }
 ```
 

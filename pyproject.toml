@@ -19,4 +19,4 @@ build-backend = "hatchling.build"
 packages = ["src/kakao_maps"]
 
 [project.scripts]
-genesis-connect = "kakao_maps.server:main"
+kakao-maps = "kakao_maps.server:main"

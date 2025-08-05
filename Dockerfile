@@ -46,4 +46,4 @@ COPY --from=uv --chown=app:app /app/.venv /app/.venv
 # 경로 설정
 ENV PATH="/app/.venv/bin:$PATH"
 
-ENTRYPOINT ["kakaomap"]
+ENTRYPOINT ["kakao-maps"]

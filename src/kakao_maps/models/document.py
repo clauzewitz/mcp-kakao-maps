@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 
-from src.kakao_maps.models.type import YesOrNoType, CategoryGroupCodeType
+from kakao_maps.models.type import YesOrNoType, CategoryGroupCodeType
 
 
 class Address(BaseModel):
