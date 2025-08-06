@@ -180,6 +180,23 @@ async def search_places_by_category(category_group_code: CategoryGroupCodeType) 
     except Exception as e:
         return f'장소 검색을 할 수 없습니다. 오류: {str(e)}'
 
+@mcp.tool("create_share_link")
+async def create_share_link(place_id: str) -> str:
+    """
+    장소 검색 결과에 대한 공유 링크를 생성합니다.
+
+    Args:
+        place_id (str): 장소의 고유 ID
+
+    Returns:
+        str: 성공 시 생성된 공유 링크를 반환합니다.
+        str: 오류 발생 시 오류 메시지를 반환합니다.
+    """
+    try:
+        return f'https://place.map.kakao.com/{place_id}'
+    except Exception as e:
+        return f'공유 링크를 생성할 수 없습니다. 오류: {str(e)}'
+
 def main():
     """
     Main function to run the FastMCP server.
