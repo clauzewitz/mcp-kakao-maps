@@ -1,5 +1,6 @@
 import logging
 import os
+from importlib.metadata import version
 from typing import Final
 
 import aiohttp
@@ -20,7 +21,7 @@ if not os.getenv("KAKAO_API_KEY"):
 
 KAKAO_API_KEY: Final = str(os.getenv("KAKAO_API_KEY")).strip()
 
-mcp: Final = FastMCP("kakao-maps")
+mcp: Final = FastMCP("Kakao Maps", version=version("kakao-maps"))
 
 headers: Final = {
     'Authorization': f'KakaoAK {KAKAO_API_KEY}'
